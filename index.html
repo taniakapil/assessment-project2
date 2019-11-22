@@ -1,0 +1,162 @@
+<html>
+<title>Meal-Me-Up</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<script language="JavaScript" type="text/javascript" >
+   
+   
+  //1st endpoint*******  List all meals 
+     
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/search.php?f=a",
+  "method": "GET",
+  "headers": {
+ 
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+ //end of 1st endpoint*****
+
+
+ //2nd endpoint********Random Meals
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast",
+  "method": "GET",
+  "headers": {
+
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+//end of 2nd endpoint******
+
+
+
+//3rd endpoint*******All Meal categories
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/categories.php",
+  "method": "GET",
+  "headers": {
+
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+  //end of 3rd endpoint*****
+
+
+//4th endpoint*****Ingredients
+
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/list.php?i=list",
+  "method": "GET",
+  "headers": {
+   
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+//end of 4th endpoint*****
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script> 
+  
+  
+<div id="title" class="slide header" style="background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/2566299/910/607/m2/fpnw/wm1/bysm5b45ic8spfju8otu5ecavlxsglkytng8hqy6yu1gbnicptjlzugjyfgi8ame-.jpg?1492599880&s=0d16b6bea05c1d9e643e637dadd64683);">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#slide1">All Meals</a>
+    <a href="#slide2">Yummy Meals</a>
+    <a href="#slide3">All Categories</a>
+    <a href="#slide4">All Ingredients</a>
+    <a href="#slide5">About Me</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer;color: beige;"  onclick="openNav()">&#9776; menu</span>
+  <h1  class="heading" style="font-size:170px;">Meal-Me-Up</h1>
+  
+ 
+</div>
+
+
+<div id="slide1" class="slide"style="background-image: url(https://whitehartsherington.b-cdn.net/wp-content/uploads/sites/94/2018/10/The-White-Hart-in-Sherrington-header-food.jpg);" >
+  <div class="title">
+    <h1><b>All Meals</b></h1>
+   <a href="allmeals.html"> <button class="btn btn-info btn-lg">Check our All Meals!</button></a>
+
+  </div>
+  <img class="s1img" id="jpg1" src="https://egghead.photography/wp-content/uploads/2017/12/food-photographer-shanghai-huoguo-mushrooms.jpg">
+  <img class="s1img" id="jpg2" src="https://i.etsystatic.com/17501427/r/il/a35d8a/1522790451/il_570xN.1522790451_qu3f.jpg">
+</div>
+
+<div id="slide2" class="slide"style="background-image: url(http://annstreetstudio.com/wp-content/gallery/eat-paris-post/Eat_Paris_40.jpg);">
+  <div class="title">
+    <h1><b>Chicken Fan? Check these out</b></h1>
+    <a href="chicken.html"> <button class="btn btn-warning btn-lg">All chicken dishes</button></a>
+  </div>
+  <img class="s2img" id="jpg3" src="https://www.bbcgoodfood.com/sites/default/files/styles/category_retina/public/recipe-collections/collection-image/2013/05/mexican-chicken-burger_1.jpg?itok=LJYhlfBT">
+  <img class="s2img" id="jpg4" src="https://www.traverse-events.com/blog/wp-content/uploads/2019/04/antigua-food-stewed-chicken-750x1125-750x500.jpg"> 
+</div>
+
+<div id="slide3" class="slide"style="background-image: url(http://annstreetstudio.com/wp-content/gallery/eat-paris-post/Eat_Paris_05.jpg);">
+  <div class="title">
+    <h1><b>All Categories</b></h1>
+    <a href="categories.html"><button class="btn btn-danger btn-lg">Check out all the categories</button></a>
+  </div>
+  <img  class="s3img" id="jpg5" src="https://i.ndtvimg.com/i/2016-06/chinese-625_625x350_81466064119.jpg">
+  <img  class="s3img" id="jpg6" src="https://i.ndtvimg.com/i/2016-06/noodles-625_625x350_41465896870.jpg">
+</div>
+
+<div id="slide4" class="slide" style="background-image: url(https://www.hotelkushalagreens.com/images/food1.jpg);">
+  <div class="title">
+    <h1><b>All Meal Ingredients</b></h1>
+    <a href="ingredients.html"><button class="btn btn-success btn-lg">Check out all the ingredients</button></a>
+  </div>
+  <img class="s4img" id="jpg7" src="https://img.grouponcdn.com/deal/miLFAvirxTpiPkcssj3w/p1-700x420/v1/sc600x600.jpg">
+  <img class="s4img" id="jpg8" src="https://media.tacdn.com/media/attractions-splice-spp-360x240/06/6f/40/06.jpg"> 
+</div>
+
+ <div id="slide5" class="bg-dark justify-content-center">
+
+  <div class="container-fluid">
+ <a href="https://taniakapil.github.io/resumee/."> <button class="btn-light p-3 m-3" type="button" style="font-size:20px ;">Click Here To View My Resume Website</button></a>
+ </div>
+  <div class="bg-success justify-content-center">
+    <p style="text-align: center;">Copyright @taniakapil </p>
+  </div>
+
+    
+ </div>
+
+</html>

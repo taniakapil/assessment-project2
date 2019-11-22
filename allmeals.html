@@ -1,0 +1,113 @@
+<title>All meals</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script language="JavaScript" type="text/javascript" >
+   
+
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/categories.php",
+  "method": "GET",
+  "headers": {
+    
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+    
+    document.getElementById("name1").innerHTML=response.categories[0].strCategory;
+    document.getElementById("img1").src=response .categories[0]. strCategoryThumb;
+    document.getElementById("desc1").innerHTML="Description:" +'<br/>'+response .categories[0].strCategoryDescription;
+  //document.getElementById("rate1").innerHTML="IMDB RATING: " +response .results[0].vote_average;
+
+
+
+  document.getElementById("name2").innerHTML=response .categories[1].strCategory;
+  document.getElementById("img2").src=response.categories[1]. strCategoryThumb;
+  document.getElementById("desc2").innerHTML="Description:" +'<br/>'+response.categories[1].strCategoryDescription;
+  //document.getElementById("rate2").innerHTML="IMDB RATING: " +response .results[1].vote_average;
+
+
+
+
+  document.getElementById("name3").innerHTML=response .categories[2].strCategory;
+  document.getElementById("img3").src=response .categories[2]. strCategoryThumb;
+  document.getElementById("desc3").innerHTML="Description:" +'<br/>'+response .categories[2].strCategoryDescription;
+  // document.getElementById("rate3").innerHTML="IMDB RATING: " +response .results[7].vote_average;
+
+
+  document.getElementById("name4").innerHTML=response.categories[3].strCategory;
+  document.getElementById("img4").src=response.categories[3]. strCategoryThumb;
+  document.getElementById("desc4").innerHTML="Description:" +'<br/>'+response.categories[3].strCategoryDescription;
+  // document.getElementById("rate4").innerHTML="IMDB RATING: " +response .results[3].vote_average;
+
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+<div id="title" class="slide header" style="background-image: url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+   
+  <h1  class="heading" style="font-size:175px;">All Meals</h1>
+ 
+</div>
+
+<div id="slide1" class="slide" style="background-image:url(https://www.themealdb.com/images/category/beef.png)">
+  <div class="title">
+    <h1 id="name1"></h1>
+    <p id="desc1"></p>
+    <p id="rate1"></p>
+  </div>
+  <img class="s1img" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-roast-beef-horizontal-1540505165.jpg?crop=1xw:0.75xh;center,top&resize=1200:*">
+  <img class="s1img" id="img1">
+</div>
+
+<div id="slide2" class="slide" style="background-image:url(https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/5/27/0/0125629_03_chicken-in-skillet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371589386937.jpeg)">
+  <div class="title">
+    <h1 id="name2"></h1>
+   <p id="desc2"></p>
+   <p id="rate2"></p>
+  </div>
+  <img class="s2img" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/5/27/0/0125629_03_chicken-in-skillet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371589386937.jpeg">
+  <img class="s2img" id="img2"> 
+</div>
+
+<div id="slide3" class="slide" style="background-image:url(https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/30/0/FNK_Berry-Dessert-Lasagna-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1517349652859.jpeg)">
+  <div class="title">
+    <h1 id="name3"></h1>
+    <p id="desc3"></p>
+    <p id="rate3"></p>
+  </div>
+  <img  class="s3img" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/30/0/FNK_Berry-Dessert-Lasagna-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1517349652859.jpeg">
+  <img  class="s3img" id="img3">
+</div>
+
+
+<div id="slide4" class="slide"style="background-image:url(https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2018/03/hay-stuffed-leg-of-lamb.jpg)">
+  <div class="title">
+    <h1 id="name4"></h1>
+    <p id="desc4"></p>
+    <p id="rate4"></p>
+  </div>
+  <img class="s4img" src="https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2018/03/hay-stuffed-leg-of-lamb.jpg">
+  <img class="s4img" id="img4"> 
+</div>
+
+
+
+

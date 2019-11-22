@@ -1,0 +1,99 @@
+<title>All Categories</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script language="JavaScript" type="text/javascript" >
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://www.themealdb.com/api/json/v1/1/categories.php",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+
+    document.getElementById("name111").innerHTML=response .categories[11].strCategory;
+  document.getElementById("img111").src=response .categories[11].strCategoryThumb;
+  document.getElementById("desc111").innerHTML="Description:" +'<br/>'+response .categories[11].strCategoryDescription;
+  // document.getElementById("rate111").innerHTML="IMDB RATING: " +response .results[11].vote_average;
+
+
+  document.getElementById("name222").innerHTML=response .categories[5].strCategory;
+  document.getElementById("img222").src=response .categories[5].strCategoryThumb;
+  document.getElementById("desc222").innerHTML="Description:" +'<br/>'+response .categories[5].strCategoryDescription;
+  // document.getElementById("rate222").innerHTML="IMDB RATING: " +response .results[18].vote_average;
+
+
+  document.getElementById("name333").innerHTML=response .categories[2].strCategory;
+  document.getElementById("img333").src=response .categories[2].strCategoryThumb;
+  document.getElementById("desc333").innerHTML="Description:" +'<br/>'+response .categories[2].strCategoryDescription;
+  // document.getElementById("rate333").innerHTML="IMDB RATING: " +response .results[12].vote_average;
+
+  
+  
+  document.getElementById("name444").innerHTML=response .categories[9].strCategory;
+  document.getElementById("img444").src=response .categories[9].strCategoryThumb;
+  document.getElementById("desc444").innerHTML="Description:" +'<br/>'+response .categories[9].strCategoryDescription;
+  // document.getElementById("rate444").innerHTML="IMDB RATING: " +response .results[8].vote_average;
+
+
+  });
+</script>
+
+<div id="title" class="slide header" style="background-image: url(https://i.pinimg.com/originals/df/fc/a7/dffca74282382587f9b3d221a5c6593c.jpg);">
+   
+    <h1  class="heading" style="font-size:175px;">All Categories</h1>
+   
+  </div>
+
+  <div id="slide1" class="slide"style="background-image: url(https://studenteats-spykawebgroup.netdna-ssl.com/ts/800/450/studenteats-spykawebgroup.netdna-ssl.com/wp-content/uploads/2015/06/student-recipes-meals-5.jpg);">
+    <div class="title">
+      <h1 id="name111"></h1>
+      <p id="desc111"></p>
+      <p id="rate111"></p>
+    </div>
+    <img class="s1img" src="https://studenteats-spykawebgroup.netdna-ssl.com/ts/800/450/studenteats-spykawebgroup.netdna-ssl.com/wp-content/uploads/2015/06/student-recipes-meals-5.jpg">
+    <img class="s1img" id="img111">
+  </div>
+  
+  <div id="slide2" class="slide"style="background-image: url(https://cms.splendidtable.org/sites/default/files/styles/w2000/public/romesco-pasta-salad-basil-parmesan_c_Alex-Lau-LEDE.jpg?itok=EwqugXMF);">
+    <div class="title">
+      <h1 id="name222"></h1>
+     <p id="desc222"></p>
+     <p id="rate222"></p>
+    </div>
+    <img class="s2img" src="https://cms.splendidtable.org/sites/default/files/styles/w2000/public/romesco-pasta-salad-basil-parmesan_c_Alex-Lau-LEDE.jpg?itok=EwqugXMF">
+    <img class="s2img" id="img222"> 
+  </div>
+  
+  <div id="slide3" class="slide"style="background-image: url(https://www.seriouseats.com/images/2017/07/20170717-no-bake-dessert-recipes-roundup-01-625x469.jpg);">
+    <div class="title">
+      <h1 id="name333"></h1>
+      <p id="desc333"></p>
+      <p id="rate333"></p>
+    </div>
+    <img  class="s3img" src="https://www.seriouseats.com/images/2017/07/20170717-no-bake-dessert-recipes-roundup-01-625x469.jpg">
+    <img  class="s3img" id="img333">
+  </div>
+  
+  
+  <div id="slide4" class="slide"style="background-image: url(https://realfood.tesco.com/media/images/RFO-MAIN-472x310-Cheats-citrus-gravadlax-e0942018-5ee7-4d27-a9eb-f076d8318c3d-0-472x310.jpg);">
+    <div class="title">
+      <h1 id="name444"></h1>
+      <p id="desc444"></p>
+      <p id="rate444"></p>
+    </div>
+    <img class="s4img" src="https://realfood.tesco.com/media/images/RFO-MAIN-472x310-Cheats-citrus-gravadlax-e0942018-5ee7-4d27-a9eb-f076d8318c3d-0-472x310.jpg">
+    <img class="s4img" id="img444"> 
+  </div>
+  
+ 
+  

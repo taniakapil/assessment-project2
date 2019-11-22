@@ -1,0 +1,97 @@
+<title>Chicken Dishes</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script language="JavaScript" type="text/javascript" >
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  document.getElementById("name11").innerHTML=response.meals[0].strMeal;
+ document.getElementById("img11").src=response .meals[0].strMealThumb;
+
+
+
+
+  document.getElementById("name22").innerHTML=response.meals[1].strMeal;
+  document.getElementById("img22").src=response .meals[1].strMealThumb;
+
+
+
+  document.getElementById("name33").innerHTML=response .meals[2].strMeal;
+  document.getElementById("img33").src=response.meals[2].strMealThumb;
+
+
+
+  document.getElementById("name44").innerHTML=response.meals[3].strMeal;
+  document.getElementById("img44").src=response.meals[3].strMealThumb;
+
+
+
+
+});
+
+
+
+
+</script>
+<div id="title" class="slide header" style="background-image: url(https://thumbs.dreamstime.com/b/texture-brown-wooden-background-consist-tom-yum-chicken-other-side-dishes-copy-space-92979698.jpg);">
+   
+    <h1  class="heading" style="font-size:175px;">Chicken<br> Dishes</h1>
+   
+  </div>
+  <div id="slide1" class="slide" style="background-image: url(https://image.freepik.com/free-photo/concept-indian-cuisine-baked-chicken-wings-legs-honey-mustard-sauce-serving-dishes-restaurant-black-plate-indian-spices-wooden-table-background-image_127425-18.jpg);">
+    <div class="title">
+      <h1 id="name11"></h1>
+      <p id="desc11"></p>
+      <p id="rate11"></p>
+    </div>
+    <img class="s1img" src="https://image.freepik.com/free-photo/concept-indian-cuisine-baked-chicken-wings-legs-honey-mustard-sauce-serving-dishes-restaurant-black-plate-indian-spices-wooden-table-background-image_127425-18.jpg">
+    <img class="s1img" id="img11">
+  </div>
+  
+  <div id="slide2" class="slide"style="background-image: url(https://image.freepik.com/free-photo/oven-roasted-chicken-wings_1150-6377.jpg);">
+    <div class="title">
+      <h1 id="name22"></h1>
+     <p id="desc22"></p>
+     <p id="rate22"></p>
+    </div>
+    <img class="s2img" src="https://image.freepik.com/free-photo/oven-roasted-chicken-wings_1150-6377.jpg">
+    <img class="s2img" id="img22"> 
+  </div>
+  
+  <div id="slide3" class="slide" style="background-image: url(https://pollocoa.com/wp-content/uploads/2017/09/alitas_asadas_detalle.jpeg);">
+    <div class="title">
+      <h1 id="name33"></h1>
+      <p id="desc33"></p>
+      <p id="rate33"></p>
+    </div>
+    <img  class="s3img" src="https://pollocoa.com/wp-content/uploads/2017/09/alitas_asadas_detalle.jpeg">
+    <img  class="s3img" id="img33">
+  </div>
+  
+  
+  <div id="slide4" class="slide"style="background-image: url(https://previews.123rf.com/images/whitestorm/whitestorm1811/whitestorm181100838/112419094-grilled-chicken-legs-with-tomato-sauce-bbq-food-background.jpg);">
+    <div class="title">
+      <h1 id="name44"></h1>
+      <p id="desc44"></p>
+      <p id="rate44"></p>
+    </div>
+    <img class="s4img" src="https://previews.123rf.com/images/whitestorm/whitestorm1811/whitestorm181100838/112419094-grilled-chicken-legs-with-tomato-sauce-bbq-food-background.jpg">
+    <img class="s4img" id="img44"> 
+  </div>
+  
+  
+
+  

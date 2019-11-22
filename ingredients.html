@@ -1,0 +1,99 @@
+<title>All Ingredients</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script language="JavaScript" type="text/javascript" >
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/list.php?i=list",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+  document.getElementById("name1111").innerHTML=response .meals[22].strIngredient;
+  //document.getElementById("img1111").src="http://image.tmdb.org/t/p/w185/"+response .results[1].poster_path;
+  document.getElementById("desc1111").innerHTML="Description:" +'<br/>'+response .meals[22].strDescription;
+ // document.getElementById("rate1111").innerHTML="Release Date: " +response .results[1].release_date;
+
+   document.getElementById("name2222").innerHTML=response .meals[17].strIngredient;
+  // document.getElementById("img2222").src="http://image.tmdb.org/t/p/w185/"+response .results[14].poster_path;
+   document.getElementById("desc2222").innerHTML="Description:" +'<br/>'+response .meals[17].strDescription;
+  // document.getElementById("rate2222").innerHTML="Release Date: " +response .results[14].release_date;
+
+   document.getElementById("name3333").innerHTML=response .meals[11].strIngredient;
+  // document.getElementById("img3333").src="http://image.tmdb.org/t/p/w185/"+response .results[8].poster_path;
+   document.getElementById("desc3333").innerHTML="Description:" +'<br/>'+response .meals[11].strDescription;
+  // document.getElementById("rate3333").innerHTML="Release Date: " +response .results[8].release_date;
+
+
+ document.getElementById("name4444").innerHTML=response .meals[7].strIngredient;
+  // document.getElementById("img4444").src="http://image.tmdb.org/t/p/w185/"+response .results[3].poster_path;
+ document.getElementById("desc4444").innerHTML="Description:" +'<br/>'+response .meals[7].strDescription;
+  // document.getElementById("rate4444").innerHTML="Release Date: " +response .results[3].release_date;
+
+
+});
+    </script>
+    <div id="title" class="slide header" style="background-image: url(https://i.pinimg.com/originals/eb/d5/e3/ebd5e3d041804af65593a7637e093eed.jpg);">
+   
+        <h1  class="heading" style="font-size:175px;">All Ingredients</h1>
+       
+      </div>
+
+
+      <div id="slide1" class="slide"style="background-image: url(https://sonydinesh.recipeblog.io/fruits/stories/525/landscapeFull/514.jpg?5a241b648d748);">
+        <div class="title">
+          <h1 id="name1111"></h1>
+          <p id="desc1111"></p>
+          <p id="rate1111"></p>
+        </div>
+        <img class="s1img" src="https://sonydinesh.recipeblog.io/fruits/stories/525/landscapeFull/514.jpg?5a241b648d748">
+        <img class="s1img" id="img1111" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/1200px-Hyderabadi_Chicken_Biryani.jpg">
+      </div>
+      
+      <div id="slide2" class="slide"style="background-image: url(https://www.simplyrecipes.com/wp-content/uploads/2014/12/prime-rib-horiz-a-1600.jpg);">
+        <div class="title">
+          <h1 id="name2222"></h1>
+         <p id="desc2222"></p>
+         <p id="rate2222"></p>
+        </div>
+        <img class="s2img" src="https://www.simplyrecipes.com/wp-content/uploads/2014/12/prime-rib-horiz-a-1600.jpg">
+        <img class="s2img" id="img2222" src="https://thestayathomechef.com/wp-content/uploads/2015/01/Beef-Tenderloin-1.jpg"> 
+      </div>
+      
+      <div id="slide3" class="slide"style="background-image: url(https://www.ocregister.com/wp-content/uploads/migration/l9j/l9jau6-b78694467z.120100929173021000g8iqm9ld.2.jpg?w=620);">
+        <div class="title">
+          <h1 id="name3333"></h1>
+          <p id="desc3333"></p>
+          <p id="rate3333"></p>
+        </div>
+        <img  class="s3img" src="https://www.ocregister.com/wp-content/uploads/migration/l9j/l9jau6-b78694467z.120100929173021000g8iqm9ld.2.jpg?w=620">
+        <img  class="s3img" id="img3333" src="https://www.oakmontoliveoilcompany.com/wp-content/uploads/2018/06/Champagne-Balsamic-Vinegar.png">
+      </div>
+      
+      
+      <div id="slide4" class="slide"style="background-image: url(https://glutenfreecuppatea.co.uk/wp-content/uploads/2018/05/gluten-free-stuffed-aubergine-recipe-low-fodmap-vegan-featured.jpg);">
+        <div class="title">
+          <h1 id="name4444"></h1>
+          <p id="desc4444"></p>
+          <p id="rate4444"></p>
+        </div>
+        <img class="s4img" src="https://glutenfreecuppatea.co.uk/wp-content/uploads/2018/05/gluten-free-stuffed-aubergine-recipe-low-fodmap-vegan-featured.jpg">
+        <img class="s4img" id="img4444" src="https://images.immediate.co.uk/production/volatile/sites/2/2017/07/Spiced-aubergine-and-tomatoes-with-yogurt..jpg?quality=45&crop=8px,2192px,4464px,1897px&resize=960,413"> 
+      </div>
+      
+      
+    
+      
+ 
